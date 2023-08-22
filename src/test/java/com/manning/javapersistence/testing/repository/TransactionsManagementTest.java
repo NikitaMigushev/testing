@@ -39,6 +39,7 @@ public class TransactionsManagementTest {
     void afterTransaction() {
         if (TransactionSynchronizationManager.isActualTransactionActive()) {
             throw new IllegalStateException("AfterTransactionCheck check: Test failed because a transaction is still active.");
+
         }
     }
 }
